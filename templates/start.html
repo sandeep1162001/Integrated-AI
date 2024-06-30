@@ -13,9 +13,9 @@
     <!-- This is Header Area -->
     <div id="wrapper"
         class="overflow-x-hidden relative w-full bg-gradient-to-l from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% h-screen">
-        <header class="header">
+        <header class="">
             <nav class="">
-                <div class="relative flex mx-auto w-full items-center justify-between ">
+                <div class="relative flex mx-auto w-full items-center justify-between">
                     <!--logo-->
                     <a href="/home" class="m-6 cursor-pointer flex flex-row space-x-3">
                         <h1 class="text-[#FFFFFFB3] font-bold text-3xl">INTEGRATED</h1>
@@ -25,24 +25,25 @@
                     <div class="relative flex flex-row items-center justify-between space-x-10 px-10">
                         <button class="px-4 py-2 font-mullish text-white
                                 border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
-                                font-bold  hidden  lg:block">
+                                font-bold">
                             <a href="/signup"> Sin up</a>
                         </button>
                         <button class="px-4 py-2 font-mullish text-white
                                 border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
-                                font-bold  hidden  lg:block ">
+                                font-bold">
                             <a href="/login">Log in </a>
                         </button>
                     </div>
+                    
                 </div>
             </nav>
         </header>
-        <div id="container" class="relative flex flex-row items-center justify-center space-x-20 mx-auto py-10">
+        <div id="container" class="relative flex flex-row items-center justify-center lg:space-x-20 mx-auto py-10">
             <!--left-->
-            <div id="left" class="w-[50%]">
-                <h1 class="text-8xl text-[#FFFFFFB3]">Integrated A.I</h1>
-                <h2 class="text-3xl text-[#FFFFFFB3] py-5"> Merging Artificial Intelligence for ease and Excellence</h2>
-                <p class="text-xl text-[#FFFFFFB3] py-5">Welcome to Integrated A.I, your one-stop destination for all
+            <div id="left" class="w-[80%] lg:w-[50%]">
+                <h1 class=" text-5xl lg:text-8xl text-[#FFFFFFB3] ">Integrated A.I</h1>
+                <h2 class="text-xl lg:text-3xl text-[#FFFFFFB3] py-5"> Merging Artificial Intelligence for ease and Excellence</h2>
+                <p class=" lg:text-xl text-[#FFFFFFB3] py-3 lg:py-5">Welcome to Integrated A.I, your one-stop destination for all
                     things artificial intelligence! At Intergrated A.I,
                     we've curated a comprehensive collection of the best AI websites and resources available online,
                     all in one convenient place. Whether you're a seasoned AI professional, a curious student, or
@@ -63,7 +64,7 @@
             </div>
             <!--right-->
             <div id="right">
-                <img src="{{ url_for('static', filename='images/application-of-ai.gif') }} " alt="" class="rounded-full">
+                <img src="{{ url_for('static', filename='images/application-of-ai.gif') }} " alt="" class="rounded-full hidden md:flex lg:flex">
             </div>
         </div>
 
@@ -87,6 +88,7 @@
             </div>
         </footer>
     </div>
+
 </body>
 
 </html>
