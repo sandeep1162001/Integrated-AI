@@ -14,12 +14,20 @@
 
 <body>
     <div id="wrapper"
-        class="bg-gradient-to-r from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% flex items-center justify-center h-screen">
+        class="bg-gradient-to-r from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% flex flex-col items-center justify-center h-screen">
+        <header>
+            <a href="/home" class="m-6 cursor-pointer flex flex-row space-x-3">
+                <h1 class="text-[#FFFFFFB3] font-bold text-3xl">INTEGRATED</h1>
+                <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="Integrate A.I"
+                    class="w-[40px]">
+            </a>
+        </header>
+        
         <div id="container"
-            class="max-w-[1080pxpx] w-[960px] h-[500px] bg-[#00000050] grid grid-cols-2 items-center  p-5 rounded-2xl">
+            class="max-w-[1080pxpx] lg:w-[960px] lg:h-[500px] bg-[#00000050] grid grid-cols-1 lg:grid-cols-2 items-center  p-5 rounded-2xl">
             <!--left section-->
             <div id="left">
-                <img src="{{ url_for('static', filename='images/left.png') }}" alt="" class="max-w-[400px] h-[450px] p-0 rounded-md">
+                <img src="{{ url_for('static', filename='images/left.png') }}" alt="" class="lg:max-w-[400px] lg:h-[450px]   rounded-md hidden lg:flex">
             </div>
             <!--right section-->
             <div id="right" class="max-w-80 grid gap-5">
