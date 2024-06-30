@@ -1,0 +1,64 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of BLACKBOX AI </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Code Generation<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Automatically generates code snippets based on natural language inputs, helping
+                        developers implement features quickly​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Real-Time Knowledge<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Provides real-time answers to coding questions,
+                        leveraging up-to-date information on recent events, technological advancements, and API
+                        documentation​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Error Identification and Code Optimization<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Identifies potential errors in the code and suggests optimizations to improve code
+                        quality and performance​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Multi-Language Support<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Supports over 20 programming languages, offering flexibility for developers working
+                        across different tech stacks​ .
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Version Tracking<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Tracks changes in code, generates commit messages, and allows developers to restore
+                        previous versions, facilitating better code management​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Integration with Development Tools<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Integrates with platforms like GitHub and offers extensions for IDEs like Visual Studio
+                        Code, making it easy to incorporate into existing workflows​ .
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/blackbox.png') }}" alt="" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layoutai.html" %}
+{% block ai_uses %}
+
+
+<div id="container1">
+  <!--how to use it can help -->
+  <div id="container2" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+      <div>
+        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help
+          Farmers in many ways, including:</h2>
+        <ol class="mx-10">
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Predict weather<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help farmers predict weather patterns and make weather forecasts.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Monitor crops and soil<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help farmers monitor soil moisture, crop yields, and plant health. AI can also help farmers
+              detect diseases and pests and predict when crops will ripen.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Manage resources<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help farmers save water and manage resources more efficiently. For example, AI can help improve
+              precision irrigation systems.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Automate<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can automate greenhouses and operate agricultural robots.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Yield Prediction<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              Machine learning models can predict crop yields based on historical data, weather patterns, and
+              current conditions.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Farm Management Systems<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI-powered farm management systems can integrate data from various sources, providing farmers with
+              actionable insights for better decision-making.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--right-->
+    <div id="right">
+      <img src="{{ url_for('static', filename='images/agriculture.jpeg') }}" alt="" class="rounded-lg hidden lg:flex w-[600px]">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of snyk </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Vulnerability Detection<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Synk scans and identifies vulnerabilities in open-source dependencies used within applications, including libraries, frameworks, and packages.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Continuous Monitoring<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It provides continuous monitoring of dependencies, automatically detecting newly reported vulnerabilities and keeping security information up to date.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Real-time Alerts<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Synk delivers real-time alerts and notifications about newly discovered vulnerabilities that affect your codebase, enabling prompt action to mitigate risks.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Remediation Guidance<br>
+                     <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        The platform offers actionable insights and remediation guidance to help developers prioritize and fix vulnerabilities efficiently, including patch recommendations and version upgrades.
+                     </p>
+                    </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Integration with Development Workflows<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Synk integrates seamlessly with popular development tools and CI/CD pipelines, ensuring security checks are integrated into the software development lifecycle.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Reporting and Analytics<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        The platform provides detailed reports and analytics on vulnerability status, remediation progress, and overall security posture, facilitating informed decision-making and compliance reporting.
+                    </p>
+                </li>
+            </ol>
+         </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/synk.jpeg') }}" alt="" width="800px" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

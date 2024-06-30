@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="wrapper"
+        class="bg-gradient-to-r from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% flex items-center justify-center h-screen">
+        <div id="container"
+            class="max-w-[1080pxpx] w-[960px] h-[500px] bg-[#00000050] grid grid-cols-2 items-center  p-5 rounded-2xl">
+            <!--left section-->
+            <div id="left">
+                <img src="{{ url_for('static', filename='images/left.png') }}" alt="" class="max-w-[400px] h-[450px] p-0 rounded-md">
+            </div>
+            <!--right section-->
+            <div id="right" class="max-w-80 grid gap-5">
+                <h1 class="text-5xl font-bold text-[#FFFFFFB3]">
+                    Log in
+                </h1>
+                <p class="text-[#FFFFFFB3]">
+                    Get acccess to the world of A.I and makes your life and job
+                    easier.
+                </p>
+                <form action="/login" method="post" class="space-y-6 text-[#FFFFFFB3]">
+                    <div class="relative">
+                        <div
+                            class="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-blue-300">
+                            <i class="fa-solid fa-envelope-open"></i>
+                        </div>
+                        <input type="email" name="email" placeholder="Email Adress"
+                            class="w-80 bg-[#FFFFFF30] py-2 px-12 rounded-full   ">
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-blue-300">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <input type="text" name="password" placeholder="Password"
+                            class="w-80 bg-[#FFFFFF30] py-2 px-12 rounded-full  ">
+                    </div>
+                   <button type="submit"
+                        class="bg-gradient-to-r from-blue-400 to-cyan-200 w-80 font-semibold rounded-full py-2">
+                        Log in
+                    </button>
+                </form>
+                <div class="text-dull-white border-t border-white-light pt-4 space-y-4 text-sm">
+                    <div class="text-[#FFFFFFB3]">Don't have an account <a href="/signup"
+                            class="text-[#4D4DFF] font-semibold cursor-pointer">Sign Up</a></div>
+                    <div class="text-[#FF0000]">{% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        <span id="register">{{ messages[0] }}</span>
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

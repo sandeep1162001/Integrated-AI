@@ -1,0 +1,58 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of  Github Copilot </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Code Autocompletion<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        GitHub Copilot suggests entire lines or blocks of code as you type, based on the context of your current code and comments.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Context Awareness<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It understands programming languages, libraries, and frameworks, adapting its suggestions to match the specific requirements of your project.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Natural Language Understanding<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        You can describe functionality in plain English comments, and Copilot will generate corresponding code snippets.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Code Understanding<br>
+                     <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It can interpret and modify existing code, assisting with refactoring, debugging, and writing tests.
+                     </p>
+                    </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Language Support<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Initially, it supports several popular programming languages, including Python, JavaScript, TypeScript, Ruby, and Go, among others..
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Version Control Integration<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It seamlessly integrates with GitHub repositories, leveraging version control and collaborative features.
+                    </p>
+                </li>
+            </ol>
+         </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/github.jpg') }}" alt="" width="600px" class="rounded-md hidden lg:block  ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

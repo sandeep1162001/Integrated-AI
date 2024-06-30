@@ -1,0 +1,60 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of  Replit </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Online IDE<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Replit provides a fully featured online Integrated Development Environment (IDE) 
+                        accessible directly from the web browser, eliminating the need for local installations.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Multi-Language Support<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It supports a wide range of programming languages, 
+                        including popular ones like Python, JavaScript, Java, Ruby, C++, and many more
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Real-Time Collaboration<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Users can collaborate with others in real-time on projects, enabling pair programming and group work seamlessly..
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Version Control<br>
+                     <p class="text-[#FFFFFFB3] py-3 text-xl">
+                         Replit integrates with Git for version control, allowing users to manage code changes and collaborate effectively across different versions of their projects.
+                     </p>
+                    </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Built-in Package Management<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It includes built-in package management tools for various languages, making it easy to install and manage dependencies.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Code Hosting and Deployment<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Replit provides cloud-based hosting for projects, allowing users to deploy applications directly from the IDE.
+                    </p>
+                </li>
+            </ol>
+         </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/replit.jpeg') }}" alt="" width="600px" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

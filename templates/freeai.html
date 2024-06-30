@@ -1,0 +1,380 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--search bar-->
+<div>
+    <!-- <div class="text-center py-5">
+        <h1 class="text-[#FFFFFFB3] font-bold text-5xl">
+            Your all<br> <span id="searchHeading" class="font-bold text-7xl">A.I Websites</span><br> at one place
+        </h1>
+        <p class="py-5 text-[#FFFFFFB3] font-bold text-xl">
+            Give it a try right below, without having to sign up!
+        </p>
+    </div> -->
+    <div class="mx-[33%]">
+        <form action="" class="space-y-6 py-5">
+            <div class="relative">
+
+                <div
+                    class="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-blue-300 hover:cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" placeholder="Discover A.I by name or work"
+                    class="w-[480px] bg-[#FFFFFF30] py-2 px-12 rounded-full text-white ">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Free A.I section-->
+<div>
+    <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3]">Some useful free A.I websites</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+        
+        <!--box7-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/replit-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Replit
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Replit is an online integrated development environment (IDE) that allows users to write, collaborate on, and deploy code directly from their web browser.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/replit" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box8-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/synk-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Synk
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Synk is a security platform designed to help developers and organizations manage open-source security risks in their codebases.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/synk" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box9-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/tabnine-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Tabnine
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Tabnine is code completion tool designed to accelerate programming workflows by providing intelligent code suggestions directly within integrated development environments (IDEs)
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/tabnine" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box1-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/chatgpt logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Chatgpt
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November
+                        30, 2022.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/chatgpt" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box2-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/blackboxai-logo-org.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        BLACKBOX AI
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Blackbox AI is an AI-powered tool designed to assist developers in writing, generating, and optimizing code.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/blackboxai" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box3-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/gemini-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Gemini
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Gemini is Google's next-generation AI model, which aims to combine the capabilities of large language models with advanced problem-solving abilities and multimodal integration
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/geminiai" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box4-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/sourcery-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Sourcery AI
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Sourcery is a tool that automates code refactoring and suggests improvements in Python codebases.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/sourcery" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box5-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/github-logo.webp') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        GitHub
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        GitHub Copilot is an AI-powered code completion tool developed by GitHub in collaboration with OpenAI.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/github" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--box6-->
+        <div class="w-full min-h-[15rem] relative cursor-pointer">
+            <!-- box icon -->
+            <img src="{{ url_for('static', filename='images/intellicode-logo.png') }}"
+                class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+            <!-- box shape -->
+            <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                style="stroke-opacity: 0.8">
+                <path d="m 0 6 
+        a 6 6 0 0 1 6 -6 
+        h 250.32501220703125 
+        a 16 16 0 0 1 11 5 
+        l 77 77 
+        a 16 16 0 0 1 5 11 
+        v 126 
+        a 6 6 0 0 1 -6 6 
+        h -337.32501220703125 
+        a 6 6 0 0 1 -6 -6 
+        z" fill="#00000050"></path>
+            </svg>
+            <!-- box content -->
+            <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                        Intellicode
+                    </h3>
+                    <p class=" text-[#FFFFFFB3] mt-6">
+                        Intellicode is an AI-powered code suggestion feature developed by Microsoft for Visual Studio and Visual Studio Code.
+                    </p>
+                </div>
+                <div class="flex items-center cursor-pointer place-items-end">
+                    <a href="/intellicode" class="font-bold text-blue-600">Know More</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

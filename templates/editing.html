@@ -1,0 +1,70 @@
+{% extends "layoutai.html" %}
+{% block ai_uses %}
+
+<div id="container1">
+  <!--how to use it can help -->
+  <div id="container2" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+      <div>
+        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help
+          editors in many ways, including:</h2>
+        <ol class="mx-10">
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Automating tasks<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help with tedious tasks like creating transcripts, managing color levels, adjusting audio, and
+              removing unwanted pauses.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Improving quality<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help make footage look more polished and professional with features like noise reduction,
+              automatic green screen removal, and smart video stabilization.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Generating content<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help create videos from scripts or articles, or generate images based on prompts.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Translation and Multilingual Support<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              For multilingual projects, AI-powered translation tools can provide accurate translations and help
+              maintain the intended
+              meaning across different languages. They also aid in editing translations to ensure they read
+              naturally in the target language.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Style and Tone Improvement<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can analyze the tone and style of a document, suggesting changes to make the text more engaging,
+              formal, or aligned with the intended audience.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Plagiarism Detection<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can scan texts for potential plagiarism by comparing the content against a vast database of
+              sources.
+              This helps writers ensure the originality of their work and properly attribute any referenced
+              material.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--right-->
+    <div id="right">
+      <img src="{{ url_for('static', filename='images/editing.jpeg') }}" alt="" class="rounded-lg hidden lg:flex w-[800px]">
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

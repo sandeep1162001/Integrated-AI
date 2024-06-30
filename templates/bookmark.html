@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--container-->
+<div id="container" class=" h-screen flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <h1 class="text-5xl font-bold text-[#FFFFFFB3] py-3">Save</h1>
+        <h1 class="text-5xl font-bold text-[#FFFFFFB3] py-3">Share</h1>
+        <h1 class="text-5xl font-bold text-[#FFFFFFB3] py-3">Discover</h1>
+        <p class="text-[#FFFFFFB3] py-3">
+            Save your favorite stuff and make your work easier.
+        </p>
+        <form action="" class="space-y-6 py-5">
+            <div class="relative">
+
+                <div
+                    class="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-blue-300 hover:cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" placeholder="Discover more for you"
+                    class="w-80 bg-[#FFFFFF30] py-2 px-12 rounded-full text-[#FFFFFFB3] ">
+            </div>
+        </form>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/bookmarks.png') }}" alt="" class="rounded-md">
+        </div>
+    </div>
+</div>
+<!--bookmarked section-->
+<div id="bookmarked">
+    <div class="text-center">
+        <h1 class="text-5xl font-bold text-[#FFFFFFB3] py-5">Your bookmarked A.I list </h1>
+    </div>
+</div>
+
+{% endblock %}

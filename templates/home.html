@@ -1,0 +1,862 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Here can write all code for Home-->
+
+<!--search bar-->
+<div>
+    <div class="text-center py-5">
+        <h1 class="text-[#FFFFFFB3] font-bold text-5xl">
+            Your all<br> <span id="searchHeading" class="font-bold text-7xl">A.I Websites</span><br> at one place
+        </h1>
+        <p class="py-5 text-[#FFFFFFB3] font-bold text-xl">
+            Give it a try right below and have a easier life and work !
+        </p>
+    </div>
+    <div class="mx-[33%]">
+        <form action="" class="space-y-6 py-5">
+            <div class="relative">
+
+                <div
+                    class="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-blue-300 hover:cursor-pointer">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="search" placeholder="Discover A.I by name or work"
+                    class="w-[480px] bg-[#FFFFFF30] py-2 px-12 rounded-full text-white ">
+            </div>
+        </form>
+    </div>
+</div>
+<!--A.I based on work-->
+<div>
+    <div>
+        <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3]"> A.I websites based on your work</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+            <!--box1-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/web development.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Web development
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI web development tools use artificial intelligence to automate, improve, and streamline
+                            the web
+                            development process.
+                            They reduce manual coding efforts, optimize design elements.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/webdev" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box2-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/agriculture-logo.jpg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Agriculutre
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            Artificial intelligence (AI) can help farmers make data-driven decisions to improve
+                            productivity and
+                            environmental outcomes.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/agriculture" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box3-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/editing logo.jpeg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Editing
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI can help with editing by automating tasks and streamlining the process.
+                            AI tools can help with video and audio editing, photo editing, and more.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/editing" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box4-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/finance-logo.jpg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Finance
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI can quickly analyze large volumes of data to identify trends and help forecast future
+                            performance,
+                            letting investors chart investment growth and evaluate potential risk.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/finance" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box5-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/AI-In-Manufacturing-logo.jpg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Manufacturing
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            The application of AI in manufacturing encompasses a wide range of use cases, such as
+                            predictive
+                            maintenance,
+                            supply chain optimization, quality control, and demand forecasting.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/manufacturing" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box6-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/painting-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Painting
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI can be a valuable tool in various aspects of painting, from idea generation to technique
+                            enhancement.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/painting" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box7-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/retail-logo.jpeg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Retail
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI is transforming the retail industry by enhancing customer experiences,
+                            optimizing operations, and improving decision-making processes.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/retail" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box8-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/sports-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Sports
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI is increasingly being used in sports to enhance performance,
+                            improve coaching strategies, engage fans, and optimize operations.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/sports" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            <!--box9-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/transport-logo.jpg') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Transoprtation
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-5">
+                            AI is revolutionizing the transportation industry by improving efficiency, safety, and
+                            sustainability.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/transoprtation" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--most used A.I section-->
+<div>
+    <div>
+        <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3]"> Most used A.I websites</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+            <!--box1-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/chatgpt logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Chatgpt
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30,
+                            2022.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/chatgpt" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--box2-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/blackboxai-logo-org.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            BLACKBOX AI
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            BLACKBOX AI is the Best AI Model for Code. Millions of developers use Blackbox Code Chat to
+                            answer coding questions and assist them while writing code.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/blackboxai" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box3-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/gemini-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Gemini
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Gemini, formerly known as Bard, is a generative artificial intelligence chatbot developed by
+                            Google.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/geminiai" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--newly launched A.I section-->
+<div>
+    <div>
+        <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3] cursor-pointer"> <a href="/newai">Newly
+                launched A.I websites</a></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+            <!--box1-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/sourcery-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            sourcery
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Sourcery is your AI code reviewer who lives in your GitHub repos - instantly reviewing every
+                            pull request.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/sourcery" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box2-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/synk-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Synk
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Snyk provides fix advice and automation that enables security at scale within one platform.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/synk" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box3-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/tabnine-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Tabnine
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Tabnine is the AI code assistant that accelerates and simplifies
+                            software development while keeping your code private, secure, and compliant..
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/tabnine" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--top free-->
+<div>
+    <div>
+        <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3] cursor-pointer"><a href="/freeai">Top free A.I
+                websites</a></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+            <!--box1-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/gemini-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Gemini
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Gemini, formerly known as Bard, is a generative artificial intelligence chatbot developed by
+                            Google.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/geminiai" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box2-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/chatgpt logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Chatgpt
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30,
+                            2022.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/chatgpt" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box3-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/github-logo.webp') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            GitHub Copilot
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            GitHub Copilot is a code completion tool developed by GitHub and OpenAI that assists users
+                            of Visual Studio Code, Visual Studio,etc by autocompleting code
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/github" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--top paid-->
+<div>
+    <div>
+        <h2 class=" text-center text-5xl py-4 font-bold text-[#FFFFFFB3] cursor-pointer"> <a href="/paidai">Top paid A.I
+                websites</a></h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+            <!--box1-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/blackboxai-logo-org.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            BLACKBOX AI
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            BLACKBOX AI is the Best AI Model for Code. Millions of developers
+                            use Blackbox Code Chat to answer coding questions and assist them while writing code.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/blackboxai" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box2-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/chatgpt logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Chatgpt
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30,
+                            2022.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/chatgpt" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--box3-->
+            <div class="w-full min-h-[15rem] relative cursor-pointer">
+                <!-- box icon -->
+                <img src="{{ url_for('static', filename='images/synk-logo.png') }}"
+                    class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+                <!-- box shape -->
+                <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                    class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100"
+                    style="stroke-opacity: 0.8">
+                    <path d="m 0 6 
+                    a 6 6 0 0 1 6 -6 
+                    h 250.32501220703125 
+                    a 16 16 0 0 1 11 5 
+                    l 77 77 
+                    a 16 16 0 0 1 5 11 
+                    v 126 
+                    a 6 6 0 0 1 -6 6 
+                    h -337.32501220703125 
+                    a 6 6 0 0 1 -6 -6 
+                    z" fill="#00000050"></path>
+                </svg>
+                <!-- box content -->
+                <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                            Synk
+                        </h3>
+                        <p class=" text-[#FFFFFFB3] mt-6">
+                            Snyk provides fix advice and automation that enables security at scale within one platform.
+                        </p>
+                    </div>
+                    <div class="flex items-center cursor-pointer place-items-end">
+                        <a href="/synk" class="font-bold text-blue-600">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}"> -->
+</head>
+
+<body>
+    <!-- This is Header Area -->
+    <div id="wrapper"
+        class="overflow-x-hidden relative w-full bg-gradient-to-l from-[#F28383] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% h-screen">
+        <header class="header">
+            <nav class="">
+                <div class="relative flex mx-auto w-full items-center justify-between ">
+                    <!--logo-->
+                    <a href="/home" class="m-6 cursor-pointer flex flex-row space-x-3">
+                        <h1 class="text-[#FFFFFFB3] font-bold text-3xl">INTEGRATED</h1>
+                        <img  src="{{ url_for('static', filename='images/favicon.png') }}" alt="Integrate A.I" class="w-[40px]">
+                    </a>
+                    <ul class="flex flex-row  space-x-10 mx-auto items-center ">
+                        <!-- <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block">
+                    <a href="/">Home </a>
+                    </li> -->
+                        <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block">
+                            <a href="/newai">New A.I</a>
+                        </li>
+                        <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block">
+                            <a href="/freeai">Free A.I</a>
+                        </li>
+                        <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block">
+                            <a href="/paidai">Paid A.I</a>
+                        </li>
+                        <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block ">
+                            <a href="/contactus">Contact us</a>
+                            <div class="absolute bottom-4  w-full h-1 bg-white  group-hover:block 
+                                transition-all duration-200"></div>
+                        </li>
+                        <li class="cursor-pointer text-white leading-[1.2]  py-7
+                            hover:text-slate-700 transition-all duration-200 relative group hidden lg:block">
+                            <a href="/about">About us</a>
+                            <div class="absolute bottom-4  w-full h-1 bg-white  group-hover:block 
+                                transition-all duration-200"></div>
+                        </li>
+                    </ul>
+                    <div class="relative flex flex-row items-center justify-between space-x-10 px-10">
+                        {% if 'email' in session %}
+                        <button class="px-4 py-2 font-mullish text-white
+                                border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
+                                font-bold  hidden  lg:block">
+                            <a href="/bookmark"> BookMark</a>
+                        </button>
+                        <button class="px-4 py-2 font-mullish text-white 
+                                border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
+                                font-bold  hidden  lg:block ">
+                            <a href="/logout">Logout </a>
+                        </button>
+                        {% else %}
+                        <button class="px-4 py-2 font-mullish text-white
+                                border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
+                                font-bold  hidden  lg:block">
+                            <a href="/signup"> Sin up</a>
+                        </button>
+                        <button class="px-4 py-2 font-mullish text-white
+                                border-white border rounded-md text-sm hover:text-slate-700 transition-all duration-200 
+                                font-bold  hidden  lg:block ">
+                            <a href="/login">Log in </a>
+                        </button>
+                        {% endif %}
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!-- This is Main Contant Area -->
+
+
+        {% block content %}
+        <!-- All outside of This block content render where it can be extended code write. -->
+        {% endblock %}
+
+
+        <!-- This is Footer Area -->
+        <footer>
+            <div id="footer" class="bg-[#00000050]">
+                <div class="relative text-center text-[#FFFFFFB3] space-x-10  text-xl py-5">
+                    <a href="/home">Home</a>
+                    <a href="/contactus">Contact Us</a>
+                    <a href="about">About Us</a>
+                </div>
+                <div class="relative text-center text-[#FFFFFFB3] py-5 text-xl">
+                    <p>Copyright © 2024 <a href="/" class="text-blue-600">Integrated A.I Pvt. Ltd.</a> | Theme Designed
+                        By
+                        Sandeep Kumar
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

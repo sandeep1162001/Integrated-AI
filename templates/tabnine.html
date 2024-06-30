@@ -1,0 +1,66 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of Tabnine </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    AI-Powered Code Completion<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Tabnine uses machine learning models trained on
+                        extensive code repositories to provide intelligent and context-aware code completions as you
+                        type.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Multi-Language Support<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It supports a wide range of programming languages, including popular ones like Python,
+                        JavaScript, TypeScript, Java, C++, and many more.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Context Sensitivity<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Tabnine understands the context of your code and suggests completions based on variables,
+                        methods, and the structure of your current project, improving relevance.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Smart Suggestions<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It suggests entire lines or blocks of code, including function signatures, conditional
+                        statements, and error handling, speeding up coding tasks.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Integration with IDEs<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Tabnine seamlessly integrates with major integrated development environments (IDEs) such as
+                        Visual Studio Code, IntelliJ IDEA, Atom, and more, enhancing the coding experience without
+                        requiring additional tools or setups.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Adaptive Learning<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        The tool learns from your coding habits and adjusts its suggestions over time to better match
+                        your coding style and preferences.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/tabnine.png') }}" alt="" width="800px" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

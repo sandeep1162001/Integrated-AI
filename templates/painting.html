@@ -1,0 +1,69 @@
+{% extends "layoutai.html" %}
+{% block ai_uses %}
+
+
+<div id="container1">
+  <!--how to use it can help -->
+  <div id="container2" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+      <div>
+        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]"> Artificial intelligence (AI) can help
+          with painting in a number of ways, including:</h2>
+        <ol class="mx-10">
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Learning art styles<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can analyze thousands of images in a specific style to identify patterns, color schemes, brush
+              strokes, and thematic elements. It can then recreate or combine these styles to create new ones.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Generating images<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can use techniques like Generative Adversarial Networks (GANs) to create images that look like
+              reference images provided by an artist. GANs use two neural networks, a generator and a discriminator,
+              to create random images and then distinguish them from real images.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Merging images<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can merge multiple images to create a hybrid, based on the most prominent features of each input
+              picture. For example, the online application Artbreeder allows users to combine images from a database
+              to create new images, which can then be built upon by other users.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Enhancing art<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can add stylizations and technical improvements to existing art. It can also help artists visualize
+              ideas quickly, learn about composition and color theory, and gain new perspectives and inspirations.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Automating tasks<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can automate repetitive tasks, freeing up time for artists to focus on creative work
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            AI Paintings Via Deep Learning<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              The technology recognizes patterns in order to identify the pattern in images. Now, the same
+              technology is being used to create images. Facebook's DeepDream is an example of the use of AI in
+              painting.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--right-->
+    <div id="right">
+      <img src="{{ url_for('static', filename='images/paintinglogo.png') }}" alt="" class="rounded-lg hidden lg:flex w-fit">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

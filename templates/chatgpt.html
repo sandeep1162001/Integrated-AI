@@ -1,0 +1,62 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+  <!--left-->
+  <div id="left">
+      <div>
+          <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of chatgpt </h2>
+          <ol class="mx-10">
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Language translation<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can translate between languages and
+                      can learn to accurately translate text by being trained on a large dataset of bilingual
+                      material.
+                  </p>
+              </li>
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Text summarization<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can summarize websites, stories, and movies.
+                  </p>
+              </li>
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Conversation generation<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can generate responses in real-time based on user input, and can answer
+                      questions in a conversational tone.
+                  </p>
+              </li>
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Human-like text<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can produce text that resembles human speech and can carry emotional depth.
+                  </p>
+              </li>
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Writing<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can assist with composing emails, essays, code, and more. It can also generate
+                      stories, poems, and marketing content.
+                  </p>
+              </li>
+              <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                  Others<br>
+                  <p class="text-[#FFFFFFB3] py-3 text-xl">
+                      ChatGPT can solve math equations, debug code, classify things, and create recipes.
+                  </p>
+              </li>
+          </ol>
+      </div>
+  </div>
+  <!--right-->
+  <div id="right">
+      <div>
+          <img src="{{ url_for('static', filename='images/chatgpt3.jpg') }}" alt="" class="rounded-md hidden lg:block ">
+      </div>
+  </div>
+</div>
+
+
+{% endblock %}

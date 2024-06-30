@@ -1,0 +1,68 @@
+{% extends "layoutai.html" %}
+{% block ai_uses %}
+
+
+<div id="container1">
+  <!--how to use it can help -->
+  <div id="container2" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+      <div>
+        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help web
+          developers in many ways, including:</h2>
+        <ol class="mx-10">
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Automating tasks<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can automate repetitive tasks, freeing up developers' time for more complex work. For example, AI
+              can automate web design features like creating logos and banners.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Improving coding<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can make the coding process faster and more efficient, with fewer errors. For example, GitHub
+              Copilot can provide code suggestions and help with bug fixing.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Predicting user behavior<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can analyze data and predict user behavior, which can help developers improve user experience and
+              engagement. For example, Optimizely can run AI-powered experiments like A/B testing and
+              personalization.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Creating smarter applications<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help developers create applications with advanced features like voice recognition, chatbots,
+              and personalization. For example, Wix ADI can automatically create customized websites based on user
+              inputs.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Writing<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              A.I can assist with composing emails, code, and more.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Improving testing<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI can help with automated testing, which can lead to faster and more efficient testing, increased
+              test coverage, and improved software quality.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--right-->
+    <div id="right">
+      <img src="{{ url_for('static', filename='images/finance.png') }}" alt="" class="rounded-lg hidden lg:flex w-fit">
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of sourcery </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Automated Code Refactoring<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Sourcery analyzes Python code to automatically refactor
+                        and optimize it, applying best practices and patterns to improve readability and
+                        performance.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Code Suggestions<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It provides intelligent suggestions for code improvements,
+                        such as simplifying expressions, removing redundancies, and applying language-specific
+                        optimizations.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Integration with Editors<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Sourcery integrates seamlessly with popular code editors like Visual Studio Code,
+                        PyCharm, and Vim,
+                        allowing developers to apply suggested changes directly within their preferred
+                        environment.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Version Control Integration<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        It supports integration with Git and other version control systems,
+                        enabling automated code reviews and enhancements as part of the development workflow..
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Customizable Rules<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Developers can customize Sourcery's behavior by defining specific rules and
+                        preferences for code refactoring and optimization, tailoring it to their project's
+                        needs.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Continuous Improvement<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Sourcery learns from codebases and community
+                        feedback to continuously improve its suggestions and refactorings, ensuring relevance
+                        and effectiveness over time.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/sourcery.png') }}" alt="" width="600px" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

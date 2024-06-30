@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div id="container" class="w-full mx-auto  grid grid-cols-2 items-center  p-10 h-screen">
+    <!--left section-->
+    <div id="left">
+        <h1 class="text-5xl font-bold text-[#FFFFFFB3] ">
+            About us
+        </h1>
+        <p class=" text-[#FFFFFFB3] py-10 text-xl"> Welcome to Integrated A.I, your one-stop destination for all
+            things artificial intelligence! At Intergrated A.I,
+            we've curated a comprehensive collection of the best AI websites and resources available online,
+            all in one convenient place. Whether you're a seasoned AI professional, a curious student, or
+            someone just beginning to explore the fascinating world of artificial intelligence,
+            our platform provides easy access to the latest A.i websites.
+            Stay updated with the latest advancements, discover innovative AI
+            applications.Join us at Integrated A.I and immerse yourself in the future of technology!</p>
+        <button class="bg-gradient-to-r from-blue-400 to-cyan-200 w-80 font-semibold rounded-full py-2 p-10">
+            <a href="/contactus"> Contact Us</a>
+        </button>
+    </div>
+    <!--right section-->
+    <div id="right">
+        <img src="{{ url_for('static', filename='images/AboutUs.png') }}" alt="">
+    </div>
+</div>
+
+<!--Card display-->
+<div class="flex flex-row justify-around  my-10">
+    <div id="sandeep" class="box-border bg-[#00000050] rounded-xl">
+        <img src="{{ url_for('static', filename='images/sandeep.png') }}" width="200px" alt="" class="rounded-xl">
+        <div class="text-center"  class="text-center">
+            <h1>Sandeep kumar</h1>
+            <h2>Course :-BSC(CSDA)</h2>
+            <h2>Rollno.:-2312res569</h2>
+        </div>
+    </div>
+    <div id="chirag" class="box-border bg-[#00000050] rounded-xl">
+        <img src="{{ url_for('static', filename='images/mem-1.jpg') }}" width="200px" alt="" class="rounded-xl">
+    
+        <div class="text-center">
+            <h1>Chirag kumar</h1>
+            <h2>Course :-BSC(CSDA)</h2>
+            <h2>Rollno.:-2312res569</h2>
+        </div>
+    </div>
+    <div id="luzina"  class="box-border bg-[#00000050] rounded-xl">
+        <img src="{{ url_for('static', filename='images/mem-2.jpg') }}" width="200px" alt="" class="rounded-xl">
+    
+        <div class="text-center">
+            <h1>Luzina Tigga </h1>
+            <h2>Course :-BSC(CSDA)</h2>
+            <h2>Rollno.:-2312res569</h2>
+        </div>
+    </div>
+    <div id="Rajnish"  class="box-border bg-[#00000050] rounded-xl">
+        <img src="{{ url_for('static', filename='images/unknown.jpg') }}" width="200px" alt="" class="rounded-xl">
+    
+        <div class="text-center">
+            <h1>rajnish kumar</h1>
+            <h2>Course :-BSC(CSDA)</h2>
+            <h2>Rollno.:-2312res569</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

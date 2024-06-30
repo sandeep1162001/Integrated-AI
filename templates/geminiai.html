@@ -1,0 +1,73 @@
+{% extends "layoutai2.html" %}
+{% block ai_uses_page %}
+
+<!--how to use section-->
+<div id="container" class="flex flex-row items-center justify-around">
+    <!--left-->
+    <div id="left" class="w-[80%]">
+        <div>
+            <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Features of Gemini </h2>
+            <ol class="mx-10">
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Multimodal Integration<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+
+                        Gemini can process and integrate data from multiple modalities,
+                        such as text, images, and potentially other data types, allowing for a
+                        richer understanding and generation of content​ .
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Advanced Problem-Solving Abilities<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Building on techniques from DeepMind’s AlphaGo and AlphaFold projects,
+                        Gemini leverages reinforcement learning and other advanced AI methodologies to tackle
+                        complex problem-solving tasks​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Conversational AI Enhancement<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Gemini is designed to improve conversational AI by understanding and
+                        generating human-like text across various contexts, making interactions more natural and
+                        coherent​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Reinforcement Learning Integration<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        The model uses reinforcement learning to continually improve its performance and
+                        adapt to new challenges, similar to how AlphaGo learned to play Go at a superhuman
+                        level​.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Sophisticated Language Understanding<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        Gemini employs large language model techniques to provide deep
+                        language understanding, enabling it to generate more accurate and contextually relevant
+                        responses.
+                    </p>
+                </li>
+                <li class="text-3xl font-bold text-[#FFFFFFB3]">
+                    Scalability and Flexibility<br>
+                    <p class="text-[#FFFFFFB3] py-3 text-xl">
+                        The architecture of Gemini allows for scalability, making it suitable for a wide range
+                        of
+                        applications, from simple text generation to complex data analysis and integration
+                        tasks​.
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!--right-->
+    <div id="right">
+        <div>
+            <img src="{{ url_for('static', filename='images/gemini.webp') }}" alt="" class="rounded-md hidden lg:block ">
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
