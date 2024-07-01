@@ -79,6 +79,7 @@ def index():
 
 # Dummy data
 ai_websites = [
+    #web pages search list
     {
         'name': 'Web Development',
         'description': 'AI web development tools use artificial intelligence to automate, improve, and streamline the web development process. They reduce manual coding efforts, optimize design elements.',
@@ -102,7 +103,29 @@ ai_websites = [
         'description': 'AI can quickly analyze large volumes of data to identify trends and help forecast future performance, letting investors chart investment growth and evaluate potential risk.',
         'url': '/finance',
         'image': 'finance-logo.jpg'
+    },
+
+    # AI Pages Lists
+    {
+        'name': 'Chatgpt',
+        'description': 'ChatGPT is a chatbot and virtual assistant developed by OpenAI and launched on November 30, 2022',
+        'url': '/chatgpt',
+        'image': 'chatgpt logo.png'
+    },
+    {
+        'name': 'BLACKBOX AI',
+        'description': 'Blackbox AI is an AI-powered tool designed to assist developers in writing, generating, and optimizing code.',
+        'url': '/blackboxai',
+        'image': 'blackboxai-logo-org.png'
+    },
+
+    {
+        'name': 'Gemini',
+        'description': "Gemini is Google's next-generation AI model, which aims to combine the capabilities of large language models with advanced problem-solving abilities and multimodal integration",
+        'url': '/blackboxai',
+        'image': 'gemini-logo.png'
     }
+
 ]
 
 @app.route('/search', methods=['POST'])
