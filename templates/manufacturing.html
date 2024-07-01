@@ -1,57 +1,53 @@
 {% extends "layoutai.html" %}
 {% block ai_uses %}
 
-
 <div id="container1">
-  <!--how to use it can help -->
   <div id="container2" class="flex flex-row items-center justify-around">
-    <!--left-->
+    <!-- Left Column -->
     <div id="left">
       <div>
-        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help web
-          developers in many ways, including:</h2>
+        <h2 class="text-5xl py-5 text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help manufacturing in many ways, including:</h2>
         <ol class="mx-10">
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Automating tasks<br>
+            Predictive maintenance<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can automate repetitive tasks, freeing up developers' time for more complex work. For example, AI
-              can automate web design features like creating logos and banners.
+              AI can predict equipment failures by analyzing data from various sources like vibrations and thermal imaging, allowing manufacturers to plan maintenance proactively.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Improving coding<br>
+            Supply chain optimization<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can make the coding process faster and more efficient, with fewer errors. For example, GitHub
-              Copilot can provide code suggestions and help with bug fixing.
+              AI helps optimize inventory management, logistics, and demand forecasting through data analysis, enhancing efficiency and reducing costs.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Predicting user behavior<br>
+            Production planning<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can analyze data and predict user behavior, which can help developers improve user experience and
-              engagement. For example, Optimizely can run AI-powered experiments like A/B testing and
-              personalization.
+              AI analyzes historical production data to improve production planning, minimizing waste and maximizing efficiency in manufacturing processes.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Creating smarter applications<br>
+            Quality control<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can help developers create applications with advanced features like voice recognition, chatbots,
-              and personalization. For example, Wix ADI can automatically create customized websites based on user
-              inputs.
+              AI-powered computer vision ensures product quality by detecting defects quickly and accurately, enhancing safety and reliability.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Writing<br>
+            Robotics<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              A.I can assist with composing emails, code, and more.
+              AI enhances robotics and automation systems to perform complex tasks efficiently and collaboratively, operating continuously without fatigue.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Improving testing<br>
+            Order management<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can help with automated testing, which can lead to faster and more efficient testing, increased
-              test coverage, and improved software quality.
+              AI improves order management systems by speeding up decision-making and enhancing customer service effectiveness.
+            </p>
+          </li>
+          <li class="text-3xl font-bold text-[#FFFFFFB3]">
+            Generative design<br>
+            <p class="text-[#FFFFFFB3] py-3 text-xl">
+              AI-driven generative design mimics engineers' design processes, enabling innovative and optimized product designs.
             </p>
           </li>
         </ol>
@@ -59,10 +55,9 @@
     </div>
     <!--right-->
     <div id="right">
-      <img src="{{ url_for('static', filename='images/AI-for-manufacturing.png') }}" alt="" class="rounded-lg hidden lg:flex w-fit">
+      <img src="{{ url_for('static', filename='images/AI-for-manufacturing.png') }}" alt="" width="600px" class="rounded-lg hidden lg:flex w-fit">
     </div>
   </div>
 </div>
-
 
 {% endblock %}
