@@ -1,57 +1,47 @@
 {% extends "layoutai.html" %}
 {% block ai_uses %}
 
-
 <div id="container1">
-  <!--how to use it can help -->
   <div id="container2" class="flex flex-row items-center justify-around">
-    <!--left-->
+    <!-- Left Column -->
     <div id="left">
       <div>
-        <h2 class="text-5xl py-5  text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help web
-          developers in many ways, including:</h2>
+        <h2 class="text-5xl py-5 text-center font-bold text-[#FFFFFFB3]">Artificial intelligence (AI) can help retailers in many ways, including:</h2>
         <ol class="mx-10">
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Automating tasks<br>
+            Customer experience<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can automate repetitive tasks, freeing up developers' time for more complex work. For example, AI
-              can automate web design features like creating logos and banners.
+              AI enhances customer service through personalized interactions using chatbots and in-store kiosks. It also optimizes in-store displays based on sales data analysis.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Improving coding<br>
+            Marketing<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can make the coding process faster and more efficient, with fewer errors. For example, GitHub
-              Copilot can provide code suggestions and help with bug fixing.
+              AI maximizes marketing campaign effectiveness by analyzing customer interactions, optimizing pricing strategies, and using computer vision for targeted promotions.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Predicting user behavior<br>
+            Inventory management<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can analyze data and predict user behavior, which can help developers improve user experience and
-              engagement. For example, Optimizely can run AI-powered experiments like A/B testing and
-              personalization.
+              AI streamlines inventory management, reduces shrinkage, and enhances decision-making efficiency for store associates.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Creating smarter applications<br>
+            Demand forecasting and assortment planning<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can help developers create applications with advanced features like voice recognition, chatbots,
-              and personalization. For example, Wix ADI can automatically create customized websites based on user
-              inputs.
+              AI helps retailers forecast demand accurately and plan assortments to meet customer preferences, improving inventory turnover and customer satisfaction.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Writing<br>
+            Loss prevention<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              A.I can assist with composing emails, code, and more.
+              AI assists in preventing losses through advanced analytics and monitoring, minimizing risks related to theft and operational errors.
             </p>
           </li>
           <li class="text-3xl font-bold text-[#FFFFFFB3]">
-            Improving testing<br>
+            Other applications<br>
             <p class="text-[#FFFFFFB3] py-3 text-xl">
-              AI can help with automated testing, which can lead to faster and more efficient testing, increased
-              test coverage, and improved software quality.
+              AI can generate product descriptions and marketing content using generative AI, enable visual search for customers, and innovate various retail processes.
             </p>
           </li>
         </ol>
@@ -59,10 +49,9 @@
     </div>
     <!--right-->
     <div id="right">
-      <img src="{{ url_for('static', filename='images/retail.jpeg') }}" alt="" class="rounded-lg hidden lg:flex w-fit">
+      <img src="{{ url_for('static', filename='images/retail.jpeg') }}" alt="" width="800px" class="rounded-lg hidden lg:flex w-fit">
     </div>
   </div>
 </div>
-
 
 {% endblock %}
