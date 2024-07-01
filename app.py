@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash, session
+from flask import Flask, render_template, redirect, request, flash, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 import bcrypt
 
@@ -28,6 +28,23 @@ class User(db.Model):
     def check_password(self, password):
         return bcrypt.checkpw(password.encode('utf-8'), self.password.encode('utf-8'))
     
+class Bookmark(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    ai_name = db.Column(db.String(100), nullable=False)
+    img_name = db.Column(db.String(100), nullable=False)
+    url = db.Column(db.String(2048))
+    description = db.Column(db.String(2000))
+    
+    user = db.relationship('User', backref=db.backref('bookmark', lazy=True))
+
+    def __init__(self, user_id, ai_name, img_name, url, description):
+        self.user_id = user_id
+        self.ai_name = ai_name
+        self.img_name = img_name
+        self.url = url
+        self.description = description
+  
 # Create Database with the name of "User"
 class Contactus(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -48,6 +65,7 @@ with app.app_context():
 def startpage():
     return render_template('start.html', title='Home | Integrated AI')
 
+
 # Home Page 
 @app.route('/home')
 def index():
@@ -61,17 +79,35 @@ def index():
 # New AI Lunched page
 @app.route('/newai')
 def newAi():
-    return render_template('newai.html', title='New AI')
+    if 'email' in session:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('newai.html', title='New AI')
+    else:
+        flash('You need to login first.', 'error')
+        return redirect('/login')
+    
 
 # Free AI page
 @app.route('/freeai')
 def freeAi():
-    return render_template('freeai.html', title='Free AI')
+    if 'email' in session:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('freeai.html', title='Free AI')
+    else:
+        flash('You need to login first.', 'error')
+        return redirect('/login')
+    
 
 # Paid AI page
 @app.route('/paidai')
 def paidAi():
-    return render_template('paidai.html', title=' Paid AI')
+    if 'email' in session:
+        user = User.query.filter_by(email=session['email']).first()
+        return render_template('paidai.html', title=' Paid AI')
+    else:
+        flash('You need to login first.', 'error')
+        return redirect('/login')
+    
 
 #ContactUs Page
 @app.route('/contactus', methods=['GET', 'POST'])
@@ -86,7 +122,6 @@ def contactus():
         db.session.commit()
         flash('Message Sent Successfully.', 'success')
         return redirect('/contactus')
-
     return render_template('contactus.html', title='Contact Us')
 
 #About Page
@@ -134,11 +169,46 @@ def login():
 
     return render_template('login.html')
 
+#add ai page to bookmarks
+@app.route('/addbookmark', methods=['GET', 'POST'])
+def add():
+    if 'email' in session:
+        user = User.query.filter_by(email=session['email']).first()
+        if request.method == 'POST':
+            ai_name = request.form['ai_name']
+            img_name = request.form['img_name']
+            url = request.form['url']
+            description = request.form['description']
+            
+            # Check if the AI name already exists for this user
+            existing_ai_page = Bookmark.query.filter_by(user_id=user.id, ai_name=ai_name).first()
+            
+            if not existing_ai_page:
+                # Adding bookmark
+                bookmark = Bookmark(user_id=user.id, ai_name=ai_name, img_name=img_name, url=url, description=description)
+                db.session.add(bookmark)
+                db.session.commit()
+                flash('Bookmark added successfully!')
+                return redirect('/bookmark')
+            else:
+                flash(' This AI is already exists in Bookmark.')
+                return redirect('/bookmark')
+    else:
+        flash('You need to login first.', 'error')
+        return redirect('/login')
+    
+   
 # Bookmark Page 
 @app.route('/bookmark')
 def bookmark():
-    return render_template('bookmark.html', title='Bookmark')
-
+    if 'email' in session:
+        user = User.query.filter_by(email=session['email']).first()
+        bookmark = Bookmark.query.filter_by(user_id=user.id).all()
+        return render_template('bookmark.html', title='Bookmark', bookmarks=bookmark)
+    else:
+        flash('You need to login first.', 'error')
+        return redirect('/login')
+    
 
 #Logout
 @app.route('/logout')

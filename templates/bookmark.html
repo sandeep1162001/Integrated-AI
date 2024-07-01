@@ -1,6 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
 
+<!-- massage -->
+<div class="text-center text-[#FF0000]">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <span>{{ messages[0] }}</span>
+    {% endif %}
+    {% endwith %}
+</div>
+
 <!--container-->
 <div id="container" class=" h-screen flex flex-row items-center justify-around">
     <!--left-->
@@ -36,5 +45,39 @@
         <h1 class="text-5xl font-bold text-[#FFFFFFB3] py-5">Your bookmarked A.I list </h1>
     </div>
 </div>
+<!-- render bookmark from backend -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  max-w-[1080px] gap-5 my-14 mx-auto">
+    {% for bookmark in bookmarks %}
+    <!--box-->
+    <div class="w-full min-h-[15rem] relative cursor-pointer">
+        <!-- box icon -->
+        <img src="{{ url_for('static', filename='images/' + bookmark.img_name  ) }}"
+            class="bg-[#FFFFFF30] absolute right-3 top-3 w-12 h-12 rounded-full z-[80]" />
+        <!-- box shape -->
+        <svg viewBox="0 0 349.32501220703125 225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+            class="stroke-1  stroke-[#FFFFFF30]  h-full w-full absolute z-[90] opacity-100" style="stroke-opacity: 0.8">
+            <path
+                d="m 0 6 a 6 6 0 0 1 6 -6 h 250.32501220703125 a 16 16 0 0 1 11 5 l 77 77 a 16 16 0 0 1 5 11 v 126 a 6 6 0 0 1 -6 6 h -337.32501220703125 a 6 6 0 0 1 -6 -6 z"
+                fill="#00000050"></path>
+        </svg>
+        <!-- box content -->
+        <div class="z-[1000] absolute h-full w-full pl-5 py-6 pr-8 flex flex-col justify-between">
+            <div>
+                <h3 class="font-extrabold text-[#FFFFFFB3] leading-[1.2] text-[1.375rem]">
+                    {{ bookmark.ai_name }}
+                </h3>
+                <p class=" text-[#FFFFFFB3] mt-6 line-clamp-4">
+                    {{ bookmark.description }}
+                </p>
+            </div>
+            <div class="flex items-center cursor-pointer place-items-end">
+                <a href="{{ bookmark.url }}" class="font-bold text-blue-600">Know More</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
 
 {% endblock %}
