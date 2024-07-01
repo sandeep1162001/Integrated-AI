@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 app.secret_key = 'Bablu@12345'
 
 
-# Create Database with the name of "User" for Orgnization or School
+# Create Database with the name of "User" 
 class User(db.Model): 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False)
