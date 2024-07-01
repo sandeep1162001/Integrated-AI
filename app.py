@@ -75,6 +75,46 @@ def index():
     else:
         flash('You need to login first.', 'error')
         return redirect('/login')
+    
+
+# Dummy data
+ai_websites = [
+    {
+        'name': 'Web Development',
+        'description': 'AI web development tools use artificial intelligence to automate, improve, and streamline the web development process. They reduce manual coding efforts, optimize design elements.',
+        'url': '/webdev',
+        'image': 'web development.png'
+    },
+    {
+        'name': 'Agriculture',
+        'description': 'Artificial intelligence (AI) can help farmers make data-driven decisions to improve productivity and environmental outcomes.',
+        'url': '/agriculture',
+        'image': 'agriculture-logo.jpg'
+    },
+    {
+        'name': 'Editing',
+        'description': 'AI can help with editing by automating tasks and streamlining the process. AI tools can help with video and audio editing, photo editing, and more.',
+        'url': '/editing',
+        'image': 'editing logo.jpeg'
+    },
+    {
+        'name': 'Finance',
+        'description': 'AI can quickly analyze large volumes of data to identify trends and help forecast future performance, letting investors chart investment growth and evaluate potential risk.',
+        'url': '/finance',
+        'image': 'finance-logo.jpg'
+    }
+]
+
+@app.route('/search', methods=['POST'])
+def search():
+    query = request.form.get('query', '').lower()
+    results = [site for site in ai_websites if query in site['name'].lower() or query in site['description'].lower()]
+    if not results:
+        flash('No results found. Try searching for something else...', 'success')
+        return render_template('home.html', query=query)
+    else:
+        return render_template('home.html', results=results, query=query,)
+
 
 # New AI Lunched page
 @app.route('/newai')
