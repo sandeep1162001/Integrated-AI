@@ -236,7 +236,7 @@ def agriculutre():
     img = 'web development.png'  # Replace with the actual filename or logic to determine the image
     title = 'Agriculutre'
     web_head = 'Agriculutre'
-    description = "We have trained a model called ChatGPT which interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer followup questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests. ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response. We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free."
+    description = " AI-enabled systems make weather predictions, monitor agricultural sustainability, and assess farms for the presence of diseases or pests and undernourished plants using data like temperature, precipitation, wind speed, and sun radiation in conjunction with photographs taken by satellites and drones.Agriculture is dependent on a number of variables, including soil nutrient content, moisture, crop rotation, rainfall, temperature, etc. Products based on artificial intelligence can use these variables to track crop productivity. In order to improve a wide range of agriculture-related tasks throughout the entire food supply chain, industries are turning to Artificial Intelligence technologies."
 
     return render_template('agriculutre.html', title=title, img=img,  web_head=web_head, description=description)
 
